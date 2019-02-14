@@ -1,0 +1,69 @@
+.toggler {
+    padding: 3px;
+    position: relative;
+  }
+  @-webkit-keyframes moveCircle1 {
+    50% {
+      padding: 0 12%;
+    }
+  }
+  @keyframes moveCircle1 {
+    50% {
+      padding: 0 12%;
+    }
+  }
+  @-webkit-keyframes moveCircle2 {
+    50% {
+      padding: 0 12%;
+    }
+  }
+  @keyframes moveCircle2 {
+    50% {
+      padding: 0 12%;
+    }
+  }
+  .toggler__label {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .toggler__label span {
+    margin-right: 1em;
+  }
+  .toggler__label input:checked ~ .toggler::before {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    left: 100%;
+    -webkit-animation: moveCircle2 0.2s ease 1;
+            animation: moveCircle2 0.2s ease 1;
+  }
+  .toggler::before {
+    content: "";
+    display: block;
+    background: white;
+    position: relative;
+    left: 0;
+    -webkit-animation: moveCircle1 0.2s ease 1;
+            animation: moveCircle1 0.2s ease 1;
+  }
+  
+  .toggler {
+    background: #E1E1E1;
+    border-radius: 66px;
+    width: 82.5px;
+    transition: 0.2s cubic-bezier(0.7, 0.15, 0.36, 1);
+  }
+  .toggler__label input:checked ~ .toggler {
+    background: #16b5ff;
+  }
+  .toggler::before {
+    border-radius: 33px;
+    width: 33px;
+    height: 33px;
+    transition: 0.2s cubic-bezier(0.7, 0.15, 0.36, 1);
+  }
+  
